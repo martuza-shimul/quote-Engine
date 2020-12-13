@@ -1,0 +1,537 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CDN for css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+
+    <title>Quote Engin</title>
+  </head>
+
+  <body>
+    <div class="wrapper" style="background-image: url(./bg-old.jpg)">
+      <button
+        type="button"
+        class="btn button gaint"
+        data-toggle="modal"
+        data-target=".bd-example-modal-lg"
+      >
+        Get a free quote
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade bd-example-modal-lg"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div> -->
+            <div class="modal-body">
+              <div class="quote-engine-wrapper d-flex justify-content-center">
+                <form action="./data.php" method="POST">
+                  <div class="first">
+                    <h5 class="center-align">
+                      Property Lcoation/Condition/Price
+                    </h5>
+                    <p>
+                      <label for="location"
+                        >Property locaiton/city in Turkey:</label
+                      >
+                      <select name="location" id="location">
+                        <option value="">Please Select</option>
+                        <option value="Adana">Adana</option>
+                        <option value="Alanya">Alanya</option>
+                        <option value="Atinkum">Atinkum</option>
+                        <!-- <option value="Ankara">Ankara</option> -->
+                        <!-- <option value="A">Amasya</option> -->
+                        <option value="Ankara">Ankara</option>
+                        <option value="Antalya">Antalya</option>
+                        <!-- <option value="Artvin">Artvin</option> -->
+                        <!-- <option value="Aydın">Aydın</option> -->
+                        <option value="Belek">Belek</option>
+                        <option value="Bodrum">Bodrum</option>
+                        <!-- <option value="Bingöl">Bingöl</option>
+                        <option value="Bitlis">Bitlis</option>
+                        <option value="Bolu">Bolu</option>
+                        <option value="Burdur">Burdur</option> -->
+                        <option value="Bursa">Bursa</option>
+                        <!-- <option value="Çanakkale">Çanakkale</option>
+                        <option value="Çankırı">Çankırı</option>
+                        <option value="Çorum">Çorum</option> -->
+                        <option value="Didim">Didim</option>
+                        <!-- <option value="Diyarbakır">Diyarbakır</option>
+                        <option value="Edirne">Edirne</option>
+                        <option value="Elazığ">Elazığ</option>
+                        <option value="Erzincan">Erzincan</option>
+                        <option value="Erzurum">Erzurum</option> -->
+                        <option value="Fethiye">Fethiye</option>
+                        <option value="Gazipasa">Gazipasa</option>
+                        <!-- <option value="Giresun">Giresun</option>
+                        <option value="Gümüşhane">Gümüşhane</option>
+                        <option value="Hakkâri">Hakkâri</option>
+                        <option value="Hatay">Hatay</option>
+                        <option value="Isparta">Isparta</option>
+                        <option value="Mersin">Mersin</option> -->
+                        <option value="İstanbul">İstanbul</option>
+                        <option value="İzmir">İzmir</option>
+                        <option value="Kalkan/Kas">Kalkan/Kas</option>
+                        <option value="Kekova">Kekova</option>
+                        <option value="Kemer">Kemer</option>
+                        <option value="Kıbrıs">Kıbrıs</option>
+                        <option value="Köyceğiz">Köyceğiz</option>
+                        <option value="Kuşadası">Kuşadası</option>
+                        <!-- <option value="Konya">Konya</option>
+                        <option value="Kütahya">Kütahya</option>
+                        <option value="Malatya">Malatya</option> -->
+                        <option value="Manavgat">Manavgat</option>
+                        <option value="Marmaris">Marmaris</option>
+                        <option value="Mersin">Mersin</option>
+                        <option value="Side">Side</option>
+                        <option value="Rize">Rize</option>
+                        <option value="Trabzon">Trabzon</option>
+                        <option value="Yalova">Yalova</option>
+                        <!-- <option value="Ordu">Ordu</option>
+                        <option value="Rize">Rize</option>
+                        <option value="Sakarya">Sakarya</option>
+                        <option value="Samsun">Samsun</option>
+                        <option value="Siirt">Siirt</option>
+                        <option value="Sinop">Sinop</option>
+                        <option value="Sivas">Sivas</option>
+                        <option value="Tekirdağ">Tekirdağ</option>
+                        <option value="Tokat">Tokat</option>
+                        <option value="Trabzon">Trabzon</option>
+                        <option value="Tunceli">Tunceli</option>
+                        <option value="Şanlıurfa">Şanlıurfa</option>
+                        <option value="Uşak">Uşak</option>
+                        <option value="Van">Van</option>
+                        <option value="Yozgat">Yozgat</option>
+                        <option value="Zonguldak">Zonguldak</option>
+                        <option value="Aksaray">Aksaray</option>
+                        <option value="Bayburt">Bayburt</option>
+                        <option value="Karaman">Karaman</option>
+                        <option value="Kırıkkale">Kırıkkale</option>
+                        <option value="Batman">Batman</option>
+                        <option value="Şırnak">Şırnak</option>
+                        <option value="Bartın">Bartın</option>
+                        <option value="Ardahan">Ardahan</option>
+                        <option value="Iğdır">Iğdır</option>
+                        <option value="Yalova">Yalova</option>
+                        <option value="Karabük">Karabük</option>
+                        <option value="Kilis">Kilis</option>
+                        <option value="Osmaniye">Osmaniye</option>
+                        <option value="Düzce">Düzce</option> -->
+                      </select>
+                    </p>
+                    <p>
+                      <label for="condition">Property Condition:</label>
+                      <select name="condition" id="condition">
+                        <option value="">Please Select</option>
+                        <option value="Project">Project</option>
+                        <option value="U-C">U-C</option>
+                        <option value="Fully Completed">Fully Completed</option>
+                        <option value="Resale">Resale</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label for="price">Property Price in GBP(£):</label>
+                      <select name="price" id="price">
+                        <option value="">Please Select</option>
+                        <option value="Between £40,000 - £60,000">
+                          Between £40,000 - £60,000
+                        </option>
+                        <option value="Between £60,000 - £80,000">
+                          Between £60,000 - £80,000
+                        </option>
+                        <option value="Between £80,000 - £100,000">
+                          Between £80,000 - £100,000
+                        </option>
+                        <option value="Between £100,000 - £120,000">
+                          Between £100,000 - £120,000
+                        </option>
+                        <option value="Between £120,000 - £140,000">
+                          Between £120,000 - £140,000
+                        </option>
+                        <option value="Between £140,000 - £160,000">
+                          Between £140,000 - £160,000
+                        </option>
+                        <option value="Between £160,000 - £180,000">
+                          Between £140,000 - £180,000
+                        </option>
+                        <option value="More than £200,000">
+                          More than £200,000
+                        </option>
+                      </select>
+                    </p>
+
+                    <button
+                      onclick="handleRadioClick()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+
+                  <div class="type hide">
+                    <h5 class="center-align">Property Details</h5>
+                    <p>
+                      <!-- <label for="type">Type:</label> -->
+                      <select name="type" id="type">
+                        <option value="">Select Type</option>
+                        <option value="Project">Project</option>
+                        <option value="U-C">U-C</option>
+                        <option value="Fully Completed">Fully Completed</option>
+                        <option value="Resale">Resale</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label> <!-- Preferred Size --> </label>
+                      <input
+                        name="preferred_size"
+                        type="text"
+                        required
+                        placeholder="Preferred Size"
+                      />
+                    </p>
+                    <p>
+                      <!-- <label for="room">Rooms:</label> -->
+                      <select name="rooms" id="room">
+                        <option value="">Select Rooms</option>
+                        <option value="1 + 1">1 + 1</option>
+                        <option value="2 + 1">2 + 1</option>
+                        <option value="3 + 1">3 + 1</option>
+                        <option value="4 + 1">4 + 1</option>
+                        <option value="5 + 1">5 + 1</option>
+                        <option value="6 + 1">6 + 1</option>
+                        <option value="5 + 2">5 + 2</option>
+                        <option value="6 + 2">6 + 2</option>
+                        <option value="7 + 2">7 + 2</option>
+                      </select>
+                    </p>
+                    <p>
+                      <!-- <label for="bath">Bath + WC:</label> -->
+                      <select name="bath" id="bath">
+                        <option value="">Select Bath + WC</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </p>
+                    <p>
+                      <!-- <label for="garden">Garden:</label> -->
+                      <select name="garden" id="garden">
+                        <option value="">Select Garden</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label> <!-- Garden Size --> </label>
+                      <input
+                        name="garden_size"
+                        type="text"
+                        required
+                        placeholder="Garden Size"
+                      />
+                    </p>
+                    <p>
+                      <!-- <label for="balconies">Balconies & Terraces:</label> -->
+                      <select name="balconies" id="balconies">
+                        <option value="">Select Balconies & Terraces:</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </p>
+                    <p>
+                      <!-- <label for="balconiesNo"
+                        >Balconies & Terraces Number:</label
+                      > -->
+                      <select name="balconiesNo" id="balconiesNo">
+                        <option value="">
+                          Select Balconies & Terraces Number
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                    </p>
+                    <p>
+                      <!-- <label for="furnitures">Furnitures:</label> -->
+                      <select name="furnitures" id="furnitures">
+                        <option value="">Select Furnitures</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label for="pFurnitures">Preferred Furnitures:</label>
+                      <textarea
+                        name="pFurnitures"
+                        id="pFurnitures"
+                        cols="30"
+                        rows="4"
+                        placeholder="e.g. Washer, Fridge, Oven, Sitting Groups, Microwave, Cooking Plate, TV, Music System, Air Conditioner, Curtains, Mattresses, FULLY FURNISHED"
+                      ></textarea>
+                    </p>
+                    <p>
+                      <!-- <label for="floor">Floor Materials:</label> -->
+                      <select name="floor" id="floor">
+                        <option value="">Select Floor Materials</option>
+                        <option value="Marble">Marble</option>
+                        <option value="Ceramic">Ceramic</option>
+                        <option value="Hardwood">Hardwood</option>
+                        <option value="PVC">PVC</option>
+                        <option value="Parquet">Parquet</option>
+                        <option value="Laminated">Laminated</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label> <!-- Distance to Sea (Optional) --> </label>
+                      <input
+                        name="seaDistance"
+                        type="text"
+                        placeholder="Distance to Sea (Optional)"
+                      />
+                    </p>
+                    <p>
+                      <label> <!-- Distance to Centrum (Optional) --></label>
+                      <input
+                        name="centrumDistance"
+                        type="text"
+                        placeholder="Distance to Centrum (Optional)"
+                      />
+                    </p>
+                    <p>
+                      <!-- <label for="seaView">Sea View:</label> -->
+                      <select name="seaView" id="seaView">
+                        <option value="">Select Sea View</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </p>
+                    <p>
+                      <!-- <label for="mountainView">Mountain View:</label> -->
+                      <select name="mountainView" id="mountainView">
+                        <option value="">Select Mountain View:</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </p>
+
+                    <button
+                      onclick="handleType()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <div class="third hide">
+                    <h5 class="center-align">Usage</h5>
+                    <p>
+                      <label for="pUsage">Private Usages Preferrence:</label>
+                      <textarea
+                        name="pUsage"
+                        id="pUsage"
+                        cols="30"
+                        rows="4"
+                        placeholder="e.g. Solar System, Satellite System, BBQ, Jakuzzi, Heater, Dust System, Cellar, Garage, Bathtub, Pool"
+                      ></textarea>
+                    </p>
+                    <p>
+                      <label for="gUsage">General Usages Preferrence:</label>
+                      <textarea
+                        name="gUsage"
+                        id="gUsage"
+                        cols="30"
+                        rows="4"
+                        placeholder="e.g. Swimming Pool, Pool For Children, Playground, Garage, Elevator, Cellar, BBQ, Disposal"
+                      ></textarea>
+                    </p>
+
+                    <button
+                      onclick="handleThird()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <!-- <div class="fourth hide">
+                    <h5 class="center-align">
+                      Who will purchase the materials?
+                    </h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I will provide the materials"
+                        />
+                        <span>I will provide the materials</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I would like the pro to provide materials"
+                        />
+                        <span>I would like the pro to provide materials</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I would like to discuss with the professional"
+                        />
+                        <span
+                          >I would like to discuss with the professional</span
+                        >
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="No materials needed"
+                        />
+                        <span>No materials needed</span>
+                      </label>
+                    </p>
+                    <button
+                      onclick="handleFourth()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div> -->
+                  <div class="last hide">
+                    <h5>Personal Information</h5>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="First Name: "
+                            name="firstName"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Last Name : "
+                            name="lastName"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Email: "
+                            aria-describedby="emailHelp"
+                            name="email"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="tel"
+                            class="form-control"
+                            placeholder="Telephone: "
+                            name="phone"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <textarea
+                            name="adress"
+                            class="form-control"
+                            id="exampleFormControlTextarea1"
+                            placeholder="Address"
+                            rows="3"
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn button">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn button" data-dismiss="modal">
+                X
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap js CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
